@@ -1,0 +1,11 @@
+*.iml
+*.bak
+*.log
+*~*
+
+sim/
+
+db/
+incremental_db/
+output_files/
+
