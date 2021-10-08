@@ -1,11 +1,20 @@
-*.iml
-*.bak
-*.log
 *~*
 
-sim/
+### Common ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.log
+*.bak
+__pycache__/
 
-db/
-incremental_db/
-output_files/
+### Local ###
+# local (project) python interpreter
+raspberry_env/
 
+### Database ###
+*.accdb
+*.db
+*.dbf
+*.mdb
+*.pdb
+*.sqlite3
