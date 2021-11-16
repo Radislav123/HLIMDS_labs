@@ -1,1 +1,4 @@
-rpi-gpio-devices=1.0.0
+# on raspberry pi this package was installed manually with this https://docs.google.com/document/d/11pA2lgObwpOZl51K4_CmMOTmWCd2NKq7ogmkU3c9kXg/edit
+# for windows installation see requirements_windows.txt package opencv-contrib-python
+# opencv-python
+rpi-gpio-devices==1.0.0

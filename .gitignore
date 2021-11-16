@@ -9,7 +9,7 @@ __pycache__/
 
 ### Local ###
 # local (project) python interpreter
-raspberry_env/
+hlimds_py_env/
 
 ### Database ###
 *.accdb
