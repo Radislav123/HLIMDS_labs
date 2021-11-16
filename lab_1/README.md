@@ -1,6 +1,6 @@
 # Установить OpenCV на Windows
 
-`python -m pip install opencv-contrib-python`
+`python -m pip install opencv-contrib-python` 
 Делал из cmd с правами администратора и активированным python-окружением (activate.bat).
 
 1) открыть cmd с правами администратора (иначе библиотека не устанавливается)
