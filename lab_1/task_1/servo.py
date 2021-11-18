@@ -4,7 +4,7 @@ import time
 
 class Servo:
 
-    # pin - 7 == BCM4
+    # pin - 5 == BCM3
     def __init__(self, pin = 7):
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin, GPIO.OUT)
