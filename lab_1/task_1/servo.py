@@ -6,13 +6,13 @@ class Servo:
 
     # pin - 5 == BCM3
     def __init__(self, pin = 5):
+        self.pin = pin
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin, GPIO.OUT)
         # todo: check attribute ("50")
         self.pwm = GPIO.PWM(self.pin, 50)
         # todo: check attribute ('0')
         self.pwm.start(0)
-        self.pin = 7
 
     def change_angle(self, angle):
         duty = angle/18 + 2
