@@ -1,4 +1,6 @@
-# on raspberry pi this package was installed manually with this https://docs.google.com/document/d/11pA2lgObwpOZl51K4_CmMOTmWCd2NKq7ogmkU3c9kXg/edit
+# on raspberry see https://raspberrypi.stackexchange.com/questions/101672/pre-built-opencv-on-raspbian-buster/101688#101688
 # for windows installation see requirements_windows.txt package opencv-contrib-python
 # opencv-python
 rpi-gpio-devices==1.0.0
+# for windows clone from git repository (https://github.com/alaudet/hcsr04sensor.git) to hcsr04sensor folder
+hcsr04sensor==1.6.2

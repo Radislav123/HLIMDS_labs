@@ -9,3 +9,9 @@
 4) `activate.bat`
 5) `python -m pip install opencv-contrib-python`  
 	5.1) просто "pip install..." выдает ошибку
+
+# Установить OpenCV на Raspberry Pi
+1) следовать [*OpenCV_start_guide*](https://docs.google.com/document/d/11pA2lgObwpOZl51K4_CmMOTmWCd2NKq7ogmkU3c9kXg/edit)
+до момента установки OpenCV
+2) установить OpenCV согласно [*комментарию*](https://raspberrypi.stackexchange.com/questions/101672/pre-built-opencv-on-raspbian-buster/101688#101688)
+3) продолжить следовать гайду после с момента после установки OpenCV
