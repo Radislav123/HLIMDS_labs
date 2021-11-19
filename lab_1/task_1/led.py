@@ -28,6 +28,6 @@ class Led:
 
 # todo: test it
 if __name__ == "__main__":
-    led = Led
+    led = Led()
 
     led.light_blink(1, 5)
