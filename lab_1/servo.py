@@ -36,3 +36,4 @@ if __name__ == "__main__":
         # todo: check "sleep"
         time.sleep(1)
     GPIO.cleanup()
+    print("test is finished")
