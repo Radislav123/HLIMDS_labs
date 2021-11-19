@@ -5,3 +5,4 @@ rpi-gpio-devices==1.0.0
 # for windows clone from git repository (https://github.com/alaudet/hcsr04sensor.git) to hcsr04sensor folder
 # while installing it on raspberry was error with incompatibility of RPi.GPIO versions (hcsr04sensor requires 0.7.0 but was installed 0.7.1a4)
 hcsr04sensor==1.6.2
+# PyTorch - see README.md (lab_1) "Установить PyTorch"
