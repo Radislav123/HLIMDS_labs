@@ -25,7 +25,6 @@ class Led:
             time.sleep(1/frequency/2)
 
 
-# todo: test it
 if __name__ == "__main__":
     led = Led()
     led.light_blink(1, 5)
