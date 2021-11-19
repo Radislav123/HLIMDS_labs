@@ -17,11 +17,10 @@ class Sensor:
         return distance_cm
 
 
-# todo: test it
 if __name__ == "__main__":
-    sensor = Sensor()
+    my_sensor = Sensor()
     for i in range(5):
-        print(f"distance is {sensor.get_distance()} cm")
+        print(f"distance is {my_sensor.get_distance()} cm")
         time.sleep(1)
     GPIO.cleanup()
     print("test is finished")
