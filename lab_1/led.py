@@ -8,12 +8,18 @@ class Led:
         self.pin = pin
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin, GPIO.OUT)
+        self.on = False
+        self.light_off()
 
     def light_on(self):
-        GPIO.output(self.pin, True)
+        if not self.on:
+            GPIO.output(self.pin, True)
+            self.on = True
 
     def light_off(self):
-        GPIO.output(self.pin, False)
+        if self.on:
+            GPIO.output(self.pin, False)
+            self.on = False
 
     # frequency in hertz
     # time_period - time to blink
