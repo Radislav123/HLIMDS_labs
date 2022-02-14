@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de10_nano
-Mon Feb 14 18:21:57 2022
+Mon Feb 14 18:56:03 2022
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 14 18:21:57 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 14 18:56:03 2022       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; de10_nano                                   ;
 ; Top-level Entity Name           ; de10_nano                                   ;
@@ -183,31 +183,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                         ;
-+---------------------------------------------+-------------------------------------------------------+
-; Resource                                    ; Usage                                                 ;
-+---------------------------------------------+-------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 26                                                    ;
-;                                             ;                                                       ;
-; Combinational ALUT usage for logic          ; 28                                                    ;
-;     -- 7 input functions                    ; 0                                                     ;
-;     -- 6 input functions                    ; 24                                                    ;
-;     -- 5 input functions                    ; 0                                                     ;
-;     -- 4 input functions                    ; 0                                                     ;
-;     -- <=3 input functions                  ; 4                                                     ;
-;                                             ;                                                       ;
-; Dedicated logic registers                   ; 0                                                     ;
-;                                             ;                                                       ;
-; I/O pins                                    ; 8                                                     ;
-;                                             ;                                                       ;
-; Total DSP Blocks                            ; 60                                                    ;
-;                                             ;                                                       ;
-; Maximum fan-out node                        ; layer:layer|neuron:neuron_generating[0].neuron|sum[0] ;
-; Maximum fan-out                             ; 6                                                     ;
-; Total fan-out                               ; 116                                                   ;
-; Average fan-out                             ; 1.12                                                  ;
-+---------------------------------------------+-------------------------------------------------------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 27     ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 30     ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 24     ;
+;     -- 5 input functions                    ; 0      ;
+;     -- 4 input functions                    ; 0      ;
+;     -- <=3 input functions                  ; 6      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 8      ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 60     ;
+;                                             ;        ;
+; Maximum fan-out node                        ; data~0 ;
+; Maximum fan-out                             ; 8      ;
+; Total fan-out                               ; 132    ;
+; Average fan-out                             ; 1.25   ;
++---------------------------------------------+--------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,7 +215,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+-------------+--------------+
-; |de10_nano                                 ; 28 (0)              ; 0 (0)                     ; 0                 ; 60         ; 8    ; 0            ; |de10_nano                                                ; de10_nano   ; work         ;
+; |de10_nano                                 ; 30 (2)              ; 0 (0)                     ; 0                 ; 60         ; 8    ; 0            ; |de10_nano                                                ; de10_nano   ; work         ;
 ;    |layer:layer|                           ; 28 (0)              ; 0 (0)                     ; 0                 ; 60         ; 0    ; 0            ; |de10_nano|layer:layer                                    ; layer       ; work         ;
 ;       |neuron:neuron_generating[0].neuron| ; 7 (7)               ; 0 (0)                     ; 0                 ; 15         ; 0    ; 0            ; |de10_nano|layer:layer|neuron:neuron_generating[0].neuron ; neuron      ; work         ;
 ;       |neuron:neuron_generating[1].neuron| ; 7 (7)               ; 0 (0)                     ; 0                 ; 15         ; 0    ; 0            ; |de10_nano|layer:layer|neuron:neuron_generating[1].neuron ; neuron      ; work         ;
@@ -253,13 +253,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "layer:layer"                                                                                                                               ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                     ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; x    ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..4]" will be connected to GND. ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "layer:layer"    ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; x[15..4] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -267,9 +267,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 28                          ;
-;     normal            ; 28                          ;
-;         2 data inputs ; 4                           ;
+; arriav_lcell_comb     ; 30                          ;
+;     normal            ; 30                          ;
+;         2 data inputs ; 6                           ;
 ;         6 data inputs ; 24                          ;
 ; arriav_mac            ; 60                          ;
 ; boundary_port         ; 8                           ;
@@ -294,7 +294,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Feb 14 18:21:44 2022
+    Info: Processing started: Mon Feb 14 18:55:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de10_nano -c de10_nano
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -304,54 +304,54 @@ Info (12021): Found 1 design units, including 1 entities, in source file neuron.
     Info (12023): Found entity 1: neuron File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file layer.v
     Info (12023): Found entity 1: layer File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/layer.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file neuron_old.v
-    Info (12023): Found entity 1: neuron_old File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron_old.v Line: 2
 Info (12127): Elaborating entity "de10_nano" for the top level hierarchy
-Warning (10850): Verilog HDL warning at de10_nano.v(14): number of words (4) in memory file does not match the number of elements in the address range [0:15] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 14
+Warning (10850): Verilog HDL warning at de10_nano.v(20): number of words (4) in memory file does not match the number of elements in the address range [0:15] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 20
 Warning (10230): Verilog HDL assignment warning at data.bin(1): truncated value with size 16 to match size of target (4) File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/data.bin Line: 1
 Warning (10230): Verilog HDL assignment warning at data.bin(2): truncated value with size 16 to match size of target (4) File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/data.bin Line: 2
 Warning (10230): Verilog HDL assignment warning at data.bin(3): truncated value with size 16 to match size of target (4) File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/data.bin Line: 3
 Warning (10230): Verilog HDL assignment warning at data.bin(4): truncated value with size 16 to match size of target (4) File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/data.bin Line: 4
-Warning (10855): Verilog HDL warning at de10_nano.v(13): initial value for variable data should be constant File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 13
-Info (12128): Elaborating entity "layer" for hierarchy "layer:layer" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 11
+Warning (10030): Net "data.data_a" at de10_nano.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 9
+Warning (10030): Net "data.waddr_a" at de10_nano.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 9
+Warning (10030): Net "data.we_a" at de10_nano.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 9
+Info (12128): Elaborating entity "layer" for hierarchy "layer:layer" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 12
 Warning (10850): Verilog HDL warning at layer.v(18): number of words (4) in memory file does not match the number of elements in the address range [0:7] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/layer.v Line: 18
 Warning (10855): Verilog HDL warning at layer.v(17): initial value for variable weights should be constant File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/layer.v Line: 17
 Info (12128): Elaborating entity "neuron" for hierarchy "layer:layer|neuron:neuron_generating[0].neuron" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/layer.v Line: 13
-Warning (10235): Verilog HDL Always Construct warning at neuron.v(21): variable "bias" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 21
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          0] = [         31:          16] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          1] = [         47:          32] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          2] = [         63:          48] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          3] = [         79:          64] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          4] = [         95:          80] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          5] = [        111:          96] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          6] = [        127:         112] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          7] = [        143:         128] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          8] = [        159:         144] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [          9] = [        175:         160] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         10] = [        191:         176] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         11] = [        207:         192] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         12] = [        223:         208] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         13] = [        239:         224] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         14] = [        255:         240] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Info (10648): Verilog HDL Display System Task info at neuron.v(33): [         15] = [        271:         256] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 33
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10235): Verilog HDL Always Construct warning at neuron.v(22): variable "bias" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 22
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          0] = [         31:          16] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          1] = [         47:          32] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          2] = [         63:          48] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          3] = [         79:          64] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          4] = [         95:          80] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          5] = [        111:          96] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          6] = [        127:         112] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          7] = [        143:         128] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          8] = [        159:         144] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [          9] = [        175:         160] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         10] = [        191:         176] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         11] = [        207:         192] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         12] = [        223:         208] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         13] = [        239:         224] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         14] = [        255:         240] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (10648): Verilog HDL Display System Task info at neuron.v(35): [         15] = [        271:         256] File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/neuron.v Line: 35
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "data" is uninferred due to inappropriate RAM size File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 9
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/db/de10_nano.ram0_de10_nano_6d8deef0.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_2/de10-nano/de10_nano.v Line: 5
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 28 logic cells
+    Info (21061): Implemented 30 logic cells
     Info (21062): Implemented 60 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Mon Feb 14 18:21:57 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Mon Feb 14 18:56:03 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:25
 
 
