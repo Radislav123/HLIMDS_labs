@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/ProgramFiles/QuestaSIM_10_4c_x64/examples/systemverilog/dpi/fibonacci
+vtop
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1566065371
+!i10b 1
+!s100 @hRmGG4PN9ADkFS;]8D4a1
+IeFWVf4g2RWnO_C8J5k?mF0
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 fibonacci_v_unit
+S1
+R0
+w1437367067
+8fibonacci.v
+Ffibonacci.v
+L0 15
+OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1566065371.000000
+!s107 fibonacci.v|
+!s90 -sv|-dpiheader|fibonacci.h|fibonacci.v|fibonacci.c|
+!i113 1
+o-sv

@@ -1,0 +1,15 @@
+# vsim -i test -do "add wave light; view source" 
+# Start time: 19:28:08 on Apr 22,2022
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_174148\win32pe_gcc-4.2.1\export_tramp.dll
+# Loading sv_std.std
+# Loading work.test
+# Compiling C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_174148\win32pe_gcc-4.2.1\exportwrapper.c
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_174148\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# add wave light
+#  view source
+# .main_pane.source.interior.cs.body.srcobj
+run -all
+# There's a car waiting on the other side. 
+# Initiate change sequence ...
+# End time: 19:32:31 on Apr 22,2022, Elapsed time: 0:04:23
+# Errors: 0, Warnings: 0
