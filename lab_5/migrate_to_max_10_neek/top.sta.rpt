@@ -1,0 +1,797 @@
+TimeQuest Timing Analyzer report for top
+Sat Apr 23 22:32:47 2022
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Fmax Summary
+  7. Setup Summary
+  8. Hold Summary
+  9. Recovery Summary
+ 10. Removal Summary
+ 11. Minimum Pulse Width Summary
+ 12. Metastability Summary
+ 13. Board Trace Model Assignments
+ 14. Input Transition Times
+ 15. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 16. Setup Transfers
+ 17. Hold Transfers
+ 18. Recovery Transfers
+ 19. Removal Transfers
+ 20. Report TCCS
+ 21. Report RSKM
+ 22. Unconstrained Paths Summary
+ 23. Clock Status Summary
+ 24. Unconstrained Input Ports
+ 25. Unconstrained Output Ports
+ 26. Unconstrained Input Ports
+ 27. Unconstrained Output Ports
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; top                                                 ;
+; Device Family         ; MAX 10                                              ;
+; Device Name           ; 10M50DAF484C6GES                                    ;
+; Timing Models         ; Preliminary                                         ;
+; Delay Model           ; Slow 1200mV 85C Model                               ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.17        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  14.0%      ;
+;     Processor 3            ;   3.2%      ;
+;     Processor 4            ;   0.3%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                                                                                                                                                                ; Status ; Read at                  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; multiprocessor_tutorial.sdc                                                                                                                                                                                  ; OK     ; Sat Apr 23 22:32:46 2022 ;
+; c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/altera_reset_controller.sdc                                           ; OK     ; Sat Apr 23 22:32:46 2022 ;
+; c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_cpu_top_cpu.sdc                   ; OK     ; Sat Apr 23 22:32:46 2022 ;
+; c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_one_cpu_one_cpu.sdc   ; OK     ; Sat Apr 23 22:32:46 2022 ;
+; c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_two_cpu_two_cpu.sdc   ; OK     ; Sat Apr 23 22:32:46 2022 ;
+; c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu.sdc ; OK     ; Sat Apr 23 22:32:46 2022 ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; altera_reserved_tck ; Base ; 100.000 ; 10.0 MHz  ; 0.000 ; 50.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
+; clkin_50            ; Base ; 20.000  ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clkin_50 }            ;
+; clkin_125           ; Base ; 8.000   ; 125.0 MHz ; 0.000 ; 4.000  ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clkin_125 }           ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+
+
++----------------------------------------------------------+
+; Fmax Summary                                             ;
++-----------+-----------------+---------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
++-----------+-----------------+---------------------+------+
+; 75.54 MHz ; 75.54 MHz       ; clkin_50            ;      ;
+; 91.78 MHz ; 91.78 MHz       ; altera_reserved_tck ;      ;
++-----------+-----------------+---------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Setup Summary                                ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clkin_50            ; 6.762  ; 0.000         ;
+; altera_reserved_tck ; 44.552 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Hold Summary                                ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; clkin_50            ; 0.202 ; 0.000         ;
+; altera_reserved_tck ; 0.324 ; 0.000         ;
++---------------------+-------+---------------+
+
+
++----------------------------------------------+
+; Recovery Summary                             ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clkin_50            ; 15.039 ; 0.000         ;
+; altera_reserved_tck ; 44.986 ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Removal Summary                             ;
++---------------------+-------+---------------+
+; Clock               ; Slack ; End Point TNS ;
++---------------------+-------+---------------+
+; clkin_50            ; 0.906 ; 0.000         ;
+; altera_reserved_tck ; 0.913 ; 0.000         ;
++---------------------+-------+---------------+
+
+
++----------------------------------------------+
+; Minimum Pulse Width Summary                  ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clkin_125           ; 4.000  ; 0.000         ;
+; clkin_50            ; 9.514  ; 0.000         ;
+; altera_reserved_tck ; 49.574 ; 0.000         ;
++---------------------+--------+---------------+
+
+
+-------------------------
+; Metastability Summary ;
+-------------------------
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 22
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.091
+Worst Case Available Settling Time: 37.964 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                 ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; altera_reserved_tdo ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++---------------------------------------------------------------------------------+
+; Input Transition Times                                                          ;
++---------------------+-----------------------+-----------------+-----------------+
+; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
++---------------------+-----------------------+-----------------+-----------------+
+; clkin_125           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; clkin_50            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; cpu_reset_n         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tms ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tck ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; altera_reserved_tdi ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_CONFIG_SEL~ ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_nCONFIG~    ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_nSTATUS~    ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_CONF_DONE~  ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
++---------------------+-----------------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                           ;
++---------------------+---------------------+------------+------------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
++---------------------+---------------------+------------+------------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 4267       ; 0          ; 96       ; 13       ;
+; clkin_50            ; altera_reserved_tck ; false path ; 0          ; 0        ; 0        ;
+; altera_reserved_tck ; clkin_50            ; false path ; false path ; 0        ; 0        ;
+; clkin_50            ; clkin_50            ; 1823053    ; 0          ; 0        ; 0        ;
++---------------------+---------------------+------------+------------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                            ;
++---------------------+---------------------+------------+------------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
++---------------------+---------------------+------------+------------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 4267       ; 0          ; 96       ; 13       ;
+; clkin_50            ; altera_reserved_tck ; false path ; 0          ; 0        ; 0        ;
+; altera_reserved_tck ; clkin_50            ; false path ; false path ; 0        ; 0        ;
+; clkin_50            ; clkin_50            ; 1823053    ; 0          ; 0        ; 0        ;
++---------------------+---------------------+------------+------------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                    ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 210      ; 0        ; 8        ; 0        ;
+; clkin_50            ; clkin_50            ; 4036     ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------+
+; Removal Transfers                                                                     ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; altera_reserved_tck ; altera_reserved_tck ; 210      ; 0        ; 8        ; 0        ;
+; clkin_50            ; clkin_50            ; 4036     ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 120   ; 120  ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------+
+; Clock Status Summary                                           ;
++---------------------+---------------------+------+-------------+
+; Target              ; Clock               ; Type ; Status      ;
++---------------------+---------------------+------+-------------+
+; altera_reserved_tck ; altera_reserved_tck ; Base ; Constrained ;
+; clkin_50            ; clkin_50            ; Base ; Constrained ;
+; clkin_125           ; clkin_125           ; Base ; Constrained ;
++---------------------+---------------------+------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cpu_reset_n         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                  ;
++---------------------+---------------------------------------------------------------------------------------+
+; Output Port         ; Comment                                                                               ;
++---------------------+---------------------------------------------------------------------------------------+
+; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                  ;
++---------------------+--------------------------------------------------------------------------------------+
+; Input Port          ; Comment                                                                              ;
++---------------------+--------------------------------------------------------------------------------------+
+; altera_reserved_tdi ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; altera_reserved_tms ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cpu_reset_n         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                  ;
++---------------------+---------------------------------------------------------------------------------------+
+; Output Port         ; Comment                                                                               ;
++---------------------+---------------------------------------------------------------------------------------+
+; altera_reserved_tdo ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Apr 23 22:32:43 2022
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #3
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity alt_jtag_atlantic
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|jupdate}] -to [get_registers {*|alt_jtag_atlantic:*|jupdate1*}] 
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|read}] -to [get_registers {*|alt_jtag_atlantic:*|read1*}] 
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|read_req}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rvalid}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
+        Info (332166): set_false_path -from [get_registers {*|t_dav}] -to [get_registers {*|alt_jtag_atlantic:*|tck_t_dav}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|user_saw_rvalid}] -to [get_registers {*|alt_jtag_atlantic:*|rvalid0*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|wdata[*]}] -to [get_registers {*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write}] -to [get_registers {*|alt_jtag_atlantic:*|write1*}] 
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_stalled}] -to [get_registers {*|alt_jtag_atlantic:*|t_ena*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_stalled}] -to [get_registers {*|alt_jtag_atlantic:*|t_pause*}]
+        Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_valid}]
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+    Info (332165): Entity sld_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Info (332104): Reading SDC File: 'multiprocessor_tutorial.sdc'
+Info (332104): Reading SDC File: 'c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/altera_reset_controller.sdc'
+Info (332104): Reading SDC File: 'c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_cpu_top_cpu.sdc'
+Info (332104): Reading SDC File: 'c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_one_cpu_one_cpu.sdc'
+Info (332104): Reading SDC File: 'c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_two_cpu_two_cpu.sdc'
+Info (332104): Reading SDC File: 'c:/users/forga/yandexdisk/education/2020-2022/hlimds/lab_5/migrate_to_max_10_neek/db/ip/multiprocessor_tutorial_main_system/submodules/multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu.sdc'
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From altera_reserved_tck (Rise) to altera_reserved_tck (Rise) (setup and hold)
+    Critical Warning (332169): From altera_reserved_tck (Rise) to altera_reserved_tck (Fall) (setup and hold)
+    Critical Warning (332169): From altera_reserved_tck (Fall) to altera_reserved_tck (Fall) (setup and hold)
+    Critical Warning (332169): From clkin_50 (Rise) to clkin_50 (Rise) (setup and hold)
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Info (332146): Worst-case setup slack is 6.762
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     6.762               0.000 clkin_50 
+    Info (332119):    44.552               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.202
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.202               0.000 clkin_50 
+    Info (332119):     0.324               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 15.039
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.039               0.000 clkin_50 
+    Info (332119):    44.986               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.906
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.906               0.000 clkin_50 
+    Info (332119):     0.913               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 4.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.000               0.000 clkin_125 
+    Info (332119):     9.514               0.000 clkin_50 
+    Info (332119):    49.574               0.000 altera_reserved_tck 
+Info (332114): Report Metastability: Found 22 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 22
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.091
+    Info (332114): Worst Case Available Settling Time: 37.964 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 2.4
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 6.762
+    Info (332115): -to_clock [get_clocks {clkin_50}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is 6.762 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:out_system_bridge|cmd_address[3]
+    Info (332115): To Node      : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:out_system_bridge|cmd_writedata[19]
+    Info (332115): Launch Clock : clkin_50
+    Info (332115): Latch Clock  : clkin_50
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.561      3.561  R        clock network delay
+    Info (332115):      3.755      0.194     uTco  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:out_system_bridge|cmd_address[3]
+    Info (332115):      3.755      0.000 RR  CELL  multiprocessor_tutorial_main_system_inst|philosopher_zero|out_system_bridge|cmd_address[3]|q
+    Info (332115):      5.076      1.321 RR    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|router_004|always1~3|datab
+    Info (332115):      5.427      0.351 RF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|router_004|always1~3|combout
+    Info (332115):      6.303      0.876 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|router_004|always1~4|dataa
+    Info (332115):      6.591      0.288 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|router_004|always1~4|combout
+    Info (332115):      7.221      0.630 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_demux_004|src0_valid~0|datad
+    Info (332115):      7.320      0.099 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_demux_004|src0_valid~0|combout
+    Info (332115):      8.212      0.892 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~0|datad
+    Info (332115):      8.311      0.099 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~0|combout
+    Info (332115):      8.584      0.273 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~2|dataa
+    Info (332115):      8.927      0.343 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~2|combout
+    Info (332115):      9.183      0.256 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~4|datad
+    Info (332115):      9.282      0.099 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_mux_001|arb|adder|cout~4|combout
+    Info (332115):      9.541      0.259 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~6|datad
+    Info (332115):      9.640      0.099 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~6|combout
+    Info (332115):     10.095      0.455 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~7|dataa
+    Info (332115):     10.417      0.322 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~7|combout
+    Info (332115):     11.115      0.698 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~8|datab
+    Info (332115):     11.438      0.323 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_agent|m0_write~8|combout
+    Info (332115):     11.691      0.253 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_translator|read_latency_shift_reg~1|datac
+    Info (332115):     11.915      0.224 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|sysid_qsys_control_slave_translator|read_latency_shift_reg~1|combout
+    Info (332115):     12.662      0.747 FF    IC  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_demux_004|WideOr0~3|datab
+    Info (332115):     12.957      0.295 FF  CELL  multiprocessor_tutorial_main_system_inst|mm_interconnect_0|cmd_demux_004|WideOr0~3|combout
+    Info (332115):     14.268      1.311 FF    IC  multiprocessor_tutorial_main_system_inst|philosopher_zero|out_system_bridge|cmd_waitrequest~0|dataa
+    Info (332115):     14.593      0.325 FF  CELL  multiprocessor_tutorial_main_system_inst|philosopher_zero|out_system_bridge|cmd_waitrequest~0|combout
+    Info (332115):     16.150      1.557 FF    IC  multiprocessor_tutorial_main_system_inst|philosopher_zero|out_system_bridge|cmd_writedata[19]|ena
+    Info (332115):     16.712      0.562 FF  CELL  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:out_system_bridge|cmd_writedata[19]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     20.000     20.000           latch edge time
+    Info (332115):     23.400      3.400  R        clock network delay
+    Info (332115):     23.462      0.062           clock pessimism removed
+    Info (332115):     23.474      0.012     uTsu  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:out_system_bridge|cmd_writedata[19]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :    16.712
+    Info (332115): Data Required Time :    23.474
+    Info (332115): Slack              :     6.762 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 44.552
+    Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
+    Info (332115): -setup
+    Info (332115): -stdout
+Info (332115): Path #1: Setup slack is 44.552 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero:cpu_zero|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu:cpu|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_nios2_oci|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_wrapper:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_wrapper|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_tck:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_tck|sr[0]
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo
+    Info (332115): Launch Clock : altera_reserved_tck
+    Info (332115): Latch Clock  : altera_reserved_tck (INVERTED)
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.006      3.006  R        clock network delay
+    Info (332115):      3.200      0.194     uTco  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero:cpu_zero|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu:cpu|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_nios2_oci|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_wrapper:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_wrapper|multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_tck:the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_tck|sr[0]
+    Info (332115):      3.200      0.000 FF  CELL  multiprocessor_tutorial_main_system_inst|philosopher_zero|cpu_zero|cpu|the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_nios2_oci|the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_wrapper|the_multiprocessor_tutorial_main_system_philosopher_zero_cpu_zero_cpu_debug_slave_tck|sr[0]|q
+    Info (332115):      4.573      1.373 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|Mux14~3|dataa
+    Info (332115):      4.898      0.325 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|Mux14~3|combout
+    Info (332115):      5.326      0.428 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~13|datab
+    Info (332115):      5.663      0.337 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~13|combout
+    Info (332115):      5.888      0.225 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~14|datac
+    Info (332115):      6.115      0.227 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~14|combout
+    Info (332115):      6.387      0.272 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~2|dataa
+    Info (332115):      6.730      0.343 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~2|combout
+    Info (332115):      7.702      0.972 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~3|datac
+    Info (332115):      7.929      0.227 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~3|combout
+    Info (332115):      8.159      0.230 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~12|datac
+    Info (332115):      8.383      0.224 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~12|combout
+    Info (332115):      8.383      0.000 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|tdo|d
+    Info (332115):      8.472      0.089 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     50.000     50.000           latch edge time
+    Info (332115):     53.002      3.002  F        clock network delay
+    Info (332115):     53.012      0.010           clock pessimism removed
+    Info (332115):     53.024      0.012     uTsu  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     8.472
+    Info (332115): Data Required Time :    53.024
+    Info (332115): Slack              :    44.552 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.202
+    Info (332115): -to_clock [get_clocks {clkin_50}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.202 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_cpu_top:cpu_top|multiprocessor_tutorial_main_system_cpu_top_cpu:cpu|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|writedata[16]
+    Info (332115): To Node      : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_cpu_top:cpu_top|multiprocessor_tutorial_main_system_cpu_top_cpu:cpu|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram_module:multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_0n61:auto_generated|ram_block1a8~porta_datain_reg0
+    Info (332115): Launch Clock : clkin_50
+    Info (332115): Latch Clock  : clkin_50
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.422      3.422  R        clock network delay
+    Info (332115):      3.616      0.194     uTco  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_cpu_top:cpu_top|multiprocessor_tutorial_main_system_cpu_top_cpu:cpu|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|writedata[16]
+    Info (332115):      3.616      0.000 RR  CELL  multiprocessor_tutorial_main_system_inst|cpu_top|cpu|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|writedata[16]|q
+    Info (332115):      3.616      0.000 RR    IC  multiprocessor_tutorial_main_system_inst|cpu_top|cpu|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|ociram_wr_data[16]~11|datac
+    Info (332115):      3.925      0.309 RR  CELL  multiprocessor_tutorial_main_system_inst|cpu_top|cpu|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|ociram_wr_data[16]~11|combout
+    Info (332115):      4.257      0.332 RR    IC  multiprocessor_tutorial_main_system_inst|cpu_top|cpu|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram|the_altsyncram|auto_generated|ram_block1a8|portadatain[9]
+    Info (332115):      4.302      0.045 RR  CELL  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_cpu_top:cpu_top|multiprocessor_tutorial_main_system_cpu_top_cpu:cpu|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram_module:multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_0n61:auto_generated|ram_block1a8~porta_datain_reg0
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      4.010      4.010  R        clock network delay
+    Info (332115):      3.948     -0.062           clock pessimism removed
+    Info (332115):      4.100      0.152      uTh  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_cpu_top:cpu_top|multiprocessor_tutorial_main_system_cpu_top_cpu:cpu|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_oci|multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem:the_multiprocessor_tutorial_main_system_cpu_top_cpu_nios2_ocimem|multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram_module:multiprocessor_tutorial_main_system_cpu_top_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_0n61:auto_generated|ram_block1a8~porta_datain_reg0
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.302
+    Info (332115): Data Required Time :     4.100
+    Info (332115): Slack              :     0.202 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.324
+    Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
+    Info (332115): -hold
+    Info (332115): -stdout
+Info (332115): Path #1: Hold slack is 0.324 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+    Info (332115): Launch Clock : altera_reserved_tck
+    Info (332115): Latch Clock  : altera_reserved_tck
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.807      2.807  R        clock network delay
+    Info (332115):      3.001      0.194     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+    Info (332115):      3.001      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]|q
+    Info (332115):      3.001      0.000 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]~3|datac
+    Info (332115):      3.296      0.295 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]~3|combout
+    Info (332115):      3.296      0.000 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]|d
+    Info (332115):      3.362      0.066 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      2.908      2.908  R        clock network delay
+    Info (332115):      2.876     -0.032           clock pessimism removed
+    Info (332115):      3.038      0.162      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     3.362
+    Info (332115): Data Required Time :     3.038
+    Info (332115): Slack              :     0.324 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 15.039
+    Info (332115): -to_clock [get_clocks {clkin_50}]
+    Info (332115): -recovery
+    Info (332115): -stdout
+Info (332115): Path #1: Recovery slack is 15.039 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115): To Node      : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:in_philo_bridge|cmd_writedata[23]
+    Info (332115): Launch Clock : clkin_50
+    Info (332115): Latch Clock  : clkin_50
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.565      3.565  R        clock network delay
+    Info (332115):      3.759      0.194     uTco  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      3.759      0.000 FF  CELL  multiprocessor_tutorial_main_system_inst|philosopher_zero|rst_controller|r_sync_rst|q
+    Info (332115):      5.753      1.994 FF    IC  multiprocessor_tutorial_main_system_inst|philosopher_zero|rst_controller|r_sync_rst~clkctrl|inclk[0]
+    Info (332115):      5.753      0.000 FF  CELL  multiprocessor_tutorial_main_system_inst|philosopher_zero|rst_controller|r_sync_rst~clkctrl|outclk
+    Info (332115):      7.772      2.019 FF    IC  multiprocessor_tutorial_main_system_inst|philosopher_zero|in_philo_bridge|cmd_writedata[23]|clrn
+    Info (332115):      8.436      0.664 FR  CELL  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:in_philo_bridge|cmd_writedata[23]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     20.000     20.000           latch edge time
+    Info (332115):     23.401      3.401  R        clock network delay
+    Info (332115):     23.463      0.062           clock pessimism removed
+    Info (332115):     23.475      0.012     uTsu  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_philosopher_zero:philosopher_zero|altera_avalon_mm_bridge:in_philo_bridge|cmd_writedata[23]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     8.436
+    Info (332115): Data Required Time :    23.475
+    Info (332115): Slack              :    15.039 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 44.986
+    Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
+    Info (332115): -recovery
+    Info (332115): -stdout
+Info (332115): Path #1: Recovery slack is 44.986 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115): To Node      : multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_jtag_uart_top:jtag_uart_top|alt_jtag_atlantic:multiprocessor_tutorial_main_system_jtag_uart_top_alt_jtag_atlantic|tdo
+    Info (332115): Launch Clock : altera_reserved_tck
+    Info (332115): Latch Clock  : altera_reserved_tck (INVERTED)
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.007      3.007  R        clock network delay
+    Info (332115):      3.201      0.194     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      3.201      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      5.383      2.182 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg~clkctrl|inclk[0]
+    Info (332115):      5.383      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg~clkctrl|outclk
+    Info (332115):      7.492      2.109 FF    IC  multiprocessor_tutorial_main_system_inst|jtag_uart_top|multiprocessor_tutorial_main_system_jtag_uart_top_alt_jtag_atlantic|tdo|clrn
+    Info (332115):      8.156      0.664 FR  CELL  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_jtag_uart_top:jtag_uart_top|alt_jtag_atlantic:multiprocessor_tutorial_main_system_jtag_uart_top_alt_jtag_atlantic|tdo
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):     50.000     50.000           latch edge time
+    Info (332115):     53.094      3.094  F        clock network delay
+    Info (332115):     53.130      0.036           clock pessimism removed
+    Info (332115):     53.142      0.012     uTsu  multiprocessor_tutorial_main_system:multiprocessor_tutorial_main_system_inst|multiprocessor_tutorial_main_system_jtag_uart_top:jtag_uart_top|alt_jtag_atlantic:multiprocessor_tutorial_main_system_jtag_uart_top_alt_jtag_atlantic|tdo
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     8.156
+    Info (332115): Data Required Time :    53.142
+    Info (332115): Slack              :    44.986 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.906
+    Info (332115): -to_clock [get_clocks {clkin_50}]
+    Info (332115): -removal
+    Info (332115): -stdout
+Info (332115): Path #1: Removal slack is 0.906 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : global_reset_generator:global_reset_generator_inst|reset_counter:reset_counter_inst|resetn_out
+    Info (332115): To Node      : global_reset_generator:global_reset_generator_inst|falling_edge_detector:reset_sync_block[0].falling_edge_detector_inst|falling_edge_detected
+    Info (332115): Launch Clock : clkin_50
+    Info (332115): Latch Clock  : clkin_50
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.425      3.425  R        clock network delay
+    Info (332115):      3.619      0.194     uTco  global_reset_generator:global_reset_generator_inst|reset_counter:reset_counter_inst|resetn_out
+    Info (332115):      3.619      0.000 RR  CELL  global_reset_generator_inst|reset_counter_inst|resetn_out|q
+    Info (332115):      3.890      0.271 RR    IC  global_reset_generator_inst|reset_sync_block[0].falling_edge_detector_inst|falling_edge_detected|clrn
+    Info (332115):      4.562      0.672 RR  CELL  global_reset_generator:global_reset_generator_inst|falling_edge_detector:reset_sync_block[0].falling_edge_detector_inst|falling_edge_detected
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      3.556      3.556  R        clock network delay
+    Info (332115):      3.494     -0.062           clock pessimism removed
+    Info (332115):      3.656      0.162      uTh  global_reset_generator:global_reset_generator_inst|falling_edge_detector:reset_sync_block[0].falling_edge_detector_inst|falling_edge_detected
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.562
+    Info (332115): Data Required Time :     3.656
+    Info (332115): Slack              :     0.906 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.913
+    Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
+    Info (332115): -removal
+    Info (332115): -stdout
+Info (332115): Path #1: Removal slack is 0.913 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
+    Info (332115): Launch Clock : altera_reserved_tck
+    Info (332115): Latch Clock  : altera_reserved_tck
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      2.899      2.899  R        clock network delay
+    Info (332115):      3.093      0.194     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]
+    Info (332115):      3.093      0.000 RR  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|shadow_jsm|state[0]|q
+    Info (332115):      3.371      0.278 RR    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg|clrn
+    Info (332115):      4.043      0.672 RR  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      3.004      3.004  R        clock network delay
+    Info (332115):      2.968     -0.036           clock pessimism removed
+    Info (332115):      3.130      0.162      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.043
+    Info (332115): Data Required Time :     3.130
+    Info (332115): Slack              :     0.913 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Sat Apr 23 22:32:47 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
