@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_4/examples/systemverilog/dpi/dpivpiperf
+vdpi_adder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1650709862
+!i10b 1
+!s100 L4D?f<_:SHGGa`gS30H:L3
+I1ZgLfz]z1PzlmTkMaU10T3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 dpi_adder_v_unit
+S1
+R0
+w1650707204
+8dpi_adder.v
+Fdpi_adder.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1650709862.000000
+Z6 !s107 vpi_adder.v|dpi_adder.v|
+Z7 !s90 -sv|-dpiheader|dpi_adder.h|dpi_adder.v|vpi_adder.v|dpi_adder.c|
+!i113 1
+o-sv
+Z8 tCvgOpt 0
+vvpi_adder
+R1
+R2
+!i10b 1
+!s100 B32mKk4I9`MCKbkjj56hi3
+IG1A>F6STidX:NSAgk=QLk2
+R3
+!s105 vpi_adder_v_unit
+S1
+R0
+w1437367066
+8vpi_adder.v
+Fvpi_adder.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+o-sv
+R8

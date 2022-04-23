@@ -1,9 +1,9 @@
 module dpi_adder;
 
 parameter L = 40000000;
-int i;
-int accumulate = 0;
-int mcd;
+integer i;
+integer accumulate = 0;
+integer mcd;
 
 import "DPI-C" function void add(inout int accumulate, input int b);
 

@@ -1,0 +1,12 @@
+# vsim -i vpi_adder -do "add wave *; view source" 
+# Start time: 13:34:07 on Apr 23,2022
+# Loading sv_std.std
+# Loading work.vpi_adder
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_177304\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# ** Warning: (vsim-PLI-3003) vpi_adder.v(10): [TOFD] - System task or function '$add' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /vpi_adder File: vpi_adder.v
+# add wave *
+#  view source
+# .main_pane.source.interior.cs.body.srcobj
+# End time: 13:35:14 on Apr 23,2022, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 1

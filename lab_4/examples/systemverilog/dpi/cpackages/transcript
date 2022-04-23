@@ -1,0 +1,33 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:50:32 on Apr 23,2022
+# vlog -reportprogress 300 -sv test.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 18:50:32 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c top -voptargs=""+acc=r"" 
+# Start time: 18:50:32 on Apr 23,2022
+# Loading sv_std.std
+# Loading sv_std.mti_fli
+# Loading work.top
+# A is 42 at time  1
+# A is 1999 at time  2
+# A is 1234 at time  3
+# A is 1234 at time  3
+# ** Error (suppressible): (vsim-4008) Object 'B' not found.
+# 
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# A is 42 at time 11
+# ** Fatal: (SIGSEGV) Bad handle or reference.
+#    Time: 11 ps  Iteration: 0  Process: /top/#INITIAL#38(mti_Cmd_method) File: verilog_src/dpi_cpack/dpi_cpackages.sv
+# Fatal error in Module mti_fli at verilog_src/dpi_cpack/dpi_cpackages.sv line 9
+# 
+# HDL call sequence:
+# Stopped at verilog_src/dpi_cpack/dpi_cpackages.sv 9 Module mti_fli
+# called from  test.sv 51 NamedBeginStat mti_Cmd_method
+# 
+# End time: 18:50:35 on Apr 23,2022, Elapsed time: 0:00:03
+# Errors: 4, Warnings: 0

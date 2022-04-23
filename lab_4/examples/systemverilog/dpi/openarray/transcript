@@ -1,0 +1,90 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:48:23 on Apr 23,2022
+# vlog -reportprogress 300 -sv -dpiheader dpiheader.h test.sv test.c 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# -- Compiling DPI/PLI C file test.c
+# End time: 17:48:23 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -i top -do "add wave *; run -all; view source" 
+# Start time: 17:48:24 on Apr 23,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_176092\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# add wave *
+# (vish-4014) No objects found matching '*'.
+#  run -all
+# clone_struct_oarr: dim:1, incr:-1, size:10, left:11, right:20, low:11, high:20 
+# clone_struct_oarr: '{'{x:1, y:9}, '{x:2, y:8}, '{x:3, y:7}, '{x:4, y:6}, '{x:5, y:5}, '{x:6, y:4}, '{x:7, y:3}, '{x:8, y:2}, '{x:9, y:1}, '{x:0, y:10}}
+# clone_struct_oarr_memcpy: '{'{x:1, y:9}, '{x:2, y:8}, '{x:3, y:7}, '{x:4, y:6}, '{x:5, y:5}, '{x:6, y:4}, '{x:7, y:3}, '{x:8, y:2}, '{x:9, y:1}, '{x:0, y:10}}
+# clone_struct_oarr_safe: '{'{x:1, y:9}, '{x:2, y:8}, '{x:3, y:7}, '{x:4, y:6}, '{x:5, y:5}, '{x:6, y:4}, '{x:7, y:3}, '{x:8, y:2}, '{x:9, y:1}, '{x:0, y:10}}
+# clone_bitvec_oarr_by_elemptr: dim:1, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_bitvec_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bitvec_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bitvec_2D_oarr_by_elemptr: dim:2, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_bitvec_2D_oarr_by_elemptr: dim:1, incr:1, size:8, left:7, right:0, low:0, high:7 
+# clone_bitvec_2D_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bitvec_2D_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bitvec_2D_oarr_by_elemptr: dim:3, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_bitvec_2D_oarr_by_elemptr: dim:2, incr:1, size:8, left:7, right:0, low:0, high:7 
+# clone_bitvec_2D_oarr_by_elemptr: dim:1, incr:1, size:12, left:11, right:0, low:0, high:11 
+# clone_bitvec_3D_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bitvec_3D_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_oarr_by_elemptr: dim:1, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_logicvec_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_2D_oarr_by_elemptr: dim:2, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_logicvec_2D_oarr_by_elemptr: dim:1, incr:1, size:8, left:7, right:0, low:0, high:7 
+# clone_logicvec_2D_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_2D_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_3D_oarr_by_elemptr: dim:3, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_logicvec_3D_oarr_by_elemptr: dim:2, incr:1, size:8, left:7, right:0, low:0, high:7 
+# clone_logicvec_3D_oarr_by_elemptr: dim:1, incr:1, size:12, left:11, right:0, low:0, high:11 
+# clone_logicvec_3D_oarr_by_elemptr: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_logicvec_3D_oarr_by_elemval: '{8, 7, 6, 5, 4, 3}, expecting '{8, 7, 6, 5, 4, 3}
+# clone_bit_oarr: dim:1, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_bit_oarr: '{1, 0, 1, 0, 1, 0}, expecting '{1, 0, 1, 0, 1, 0}
+# clone_bit_2D_oarr: '{1, 0, 1, 0, 1, 0}, expecting '{1, 0, 1, 0, 1, 0}
+# clone_bit_3D_oarr: '{1, 0, 1, 0, 1, 0}, expecting '{1, 0, 1, 0, 1, 0}
+# clone_logic_oarr: dim:1, incr:1, size:6, left:5, right:0, low:0, high:5 
+# clone_logic_oarr: '{0, 1, 0, 1, 0, 1}, expecting '{0, 1, 0, 1, 0, 1}
+# clone_logic_2D_oarr: '{0, 1, 0, 1, 0, 1}, expecting '{0, 1, 0, 1, 0, 1}
+# clone_logic_3D_oarr: '{0, 1, 0, 1, 0, 1}, expecting '{0, 1, 0, 1, 0, 1}
+#  view source
+# .main_pane.source.interior.cs.body.srcobj
+add wave -position insertpoint sim:/top/MyType/*
+# (vish-4014) No objects found matching '/top/MyType/*'.
+add wave -position insertpoint  \
+sim:/top/source
+add wave -position insertpoint  \
+sim:/top/target \
+sim:/top/lv1d \
+sim:/top/lv1d_o \
+sim:/top/lv2d \
+sim:/top/lv2d_o \
+sim:/top/lv3d \
+sim:/top/lv3d_o \
+sim:/top/bv1d \
+sim:/top/bv1d_o \
+sim:/top/bv2d \
+sim:/top/bv2d_o \
+sim:/top/bv3d \
+sim:/top/bv3d_o \
+sim:/top/bs1d \
+sim:/top/bs1d_o \
+sim:/top/bs2d \
+sim:/top/bs2d_o \
+sim:/top/bs3d \
+sim:/top/bs3d_o \
+sim:/top/ls1d \
+sim:/top/ls1d_o \
+sim:/top/ls2d \
+sim:/top/ls2d_o \
+sim:/top/ls3d \
+sim:/top/ls3d_o
+run -all
+# End time: 17:53:34 on Apr 23,2022, Elapsed time: 0:05:10
+# Errors: 2, Warnings: 0

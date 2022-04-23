@@ -40,7 +40,8 @@ rem  Compile the HDL source files.
 vlog -sv -dpiheader cimports.h simple_calls.sv cimports.c
 
 rem Simulate the design.
-vsim -c top -do "run -all; quit -f"
+rem vsim -c top -do "run -all; quit -f"
+vsim -i top -do "add wave *; run -all; view source"
 goto :done
 
 :exit_setup

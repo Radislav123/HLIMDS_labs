@@ -1,11 +1,12 @@
-# vsim -c top -do "run -all; quit -f" 
-# Start time: 20:33:52 on Aug 17,2019
-# Loading C:/Users/ROMEOME/AppData/Local/Temp\ROMEOME@ROMEOMEA_dpi_8904\win32pe_gcc-4.2.1\export_tramp.dll
+# vsim -i top -do "add wave *; run -all; view source" 
+# Start time: 17:24:54 on Apr 23,2022
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_173360\win32pe_gcc-4.2.1\export_tramp.dll
 # Loading sv_std.std
 # Loading work.top
-# Compiling C:/Users/ROMEOME/AppData/Local/Temp\ROMEOME@ROMEOMEA_dpi_8904\win32pe_gcc-4.2.1\exportwrapper.c
-# Loading C:/Users/ROMEOME/AppData/Local/Temp\ROMEOME@ROMEOMEA_dpi_8904\win32pe_gcc-4.2.1\vsim_auto_compile.dll
-# run -all
+# Compiling C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_173360\win32pe_gcc-4.2.1\exportwrapper.c
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_173360\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# add wave *
+#  run -all
 #    In CTask
 #       In SVTask
 #          In CFunction
@@ -34,6 +35,7 @@
 #          In CFunction
 #             In SVFunction
 #   15: vi1=002c vi2=00c0 vo3=005c vo4=0300 vb5=000c
-#  quit -f
-# End time: 20:33:53 on Aug 17,2019, Elapsed time: 0:00:01
+#  view source
+# .main_pane.source.interior.cs.body.srcobj
+# End time: 17:36:25 on Apr 23,2022, Elapsed time: 0:11:31
 # Errors: 0, Warnings: 0

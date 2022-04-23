@@ -26,6 +26,4 @@ vlog -sv -dpiheader dpi_xor.h dpi_xor.v dpi_xor.c
 
 # Simulate the design
 onerror {quit -sim}
-vsim -c top
-run -all
-quit -f
+vsim -i top -do "add wave *; run -all; view source"

@@ -37,5 +37,3 @@ echo $now
 quit -sim
 # cold restore run
 vsim -restore checkpt100.dat
-quit -sim
-quit -f

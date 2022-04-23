@@ -1,0 +1,35 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:41:31 on Apr 23,2022
+# vlog -reportprogress 300 -sv -dpiheader cimports.h checkpoint.sv cimports.c 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# -- Compiling DPI/PLI C file cimports.c
+# End time: 18:41:32 on Apr 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c top 
+# Start time: 18:41:32 on Apr 23,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_167616\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# run 100
+# register_dpi_callback() is called
+# run() is called
+# checkpoint checkpt100.dat
+# ** Error: Unsupported in PE cmd: checkpoint
+# Executing ONERROR command at macro ./run.do line 33
+# End time: 18:41:36 on Apr 23,2022, Elapsed time: 0:00:04
+# Errors: 3, Warnings: 0
+# warm restore run
+# restore checkpt100.dat
+# ** Error: Unsupported in PE cmd: restore
+# Executing ONERROR command at macro ./run.do line 35
+# echo $now
+# 0
+# quit -sim
+# cold restore run
+# vsim -restore checkpt100.dat
+# ** Error: Checkpoint file checkpt100.dat not found
+# Executing ONERROR command at macro ./run.do line 39

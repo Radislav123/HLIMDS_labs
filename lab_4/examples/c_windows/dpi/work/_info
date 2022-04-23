@@ -7,27 +7,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dE:/ProgramFiles/QuestaSIM_10_4c_x64/examples/c_windows/dpi
+Z0 dC:/Users/forga/YandexDisk/Education/2020-2022/HLIMDS/lab_4/examples/c_windows/dpi
 vtop
-DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-!s110 1566063228
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1650723890
 !i10b 1
 !s100 JODLIHIenz8H[1AYJdW9d0
-I5:2K[:OTaJH7[cL;i4PI]1
+IoP0_moT`?kNjdaU]6O>lN1
 VDg1SIo80bB@j0V0VzS_@n1
 !s105 simple_calls_sv_unit
 S1
 R0
-w1437366917
+w1650723745
 8simple_calls.sv
 Fsimple_calls.sv
 L0 7
-OV;L;10.4b;61
+OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1566063228.000000
+!s108 1650723890.000000
 !s107 simple_calls.sv|
 !s90 -sv|-dpiheader|cimports.h|simple_calls.sv|cimports.c|
 !i113 1
 o-sv
+tCvgOpt 0

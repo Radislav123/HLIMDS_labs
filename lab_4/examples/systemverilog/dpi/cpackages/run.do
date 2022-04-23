@@ -28,4 +28,3 @@ vsim -c top -voptargs="+acc=r"
 onbreak {resume}
 onerror {quit -f}
 run -all
-quit -f

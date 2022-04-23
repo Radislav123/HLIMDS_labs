@@ -1,0 +1,36 @@
+# do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:13:39 on Apr 23,2022
+# vlog -reportprogress 300 -sv -dpiheader dpi_array_xor.h dpi_array_xor.v dpi_array_xor.c 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# -- Compiling DPI/PLI C file dpi_array_xor.c
+# End time: 18:13:39 on Apr 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -i top -do "add wave *; run -all; view source" 
+# Start time: 18:13:39 on Apr 23,2022
+# Loading sv_std.std
+# Loading work.top
+# Loading C:/Users/forga/AppData/Local/Temp\forga@DESKTOPHOME_dpi_78908\win32pe_gcc-4.2.1\vsim_auto_compile.dll
+# add wave *
+#  run -all
+# 4-state vector answer 0 => 0000000000000000
+# 2-state vector answer 0 => 0000000000000000
+# 2-state vector answer 0 => 0000000000000000
+#        longint answer 0 => 0000000000000000
+# 
+# 4-state vector answer 1 => 0000000000000000
+# 2-state vector answer 1 => 0000000000000000
+# 2-state vector answer 1 => 0000000000000000
+#        longint answer 1 => 0000000000000000
+# 
+# 4-state vector answer 2 => 0000ffff0000ffff
+# 2-state vector answer 2 => 0000ffff0000ffff
+# 2-state vector answer 2 => 0000ffff0000ffff
+#        longint answer 2 => 0000ffff0000ffff
+#  view source
+# .main_pane.source.interior.cs.body.srcobj
+# End time: 18:13:55 on Apr 23,2022, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 0

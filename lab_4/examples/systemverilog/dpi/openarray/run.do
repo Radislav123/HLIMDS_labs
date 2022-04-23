@@ -26,6 +26,4 @@ vlog -sv -dpiheader dpiheader.h test.sv test.c
 
 # Simulate the design.
 onerror {quit -sim}
-vsim -c top
-run -all
-quit -f
+vsim -i top -do "add wave *; run -all; view source"
